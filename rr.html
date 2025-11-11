@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html class="scroll-smooth"lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Ricardo Rodas | Família e Tradição</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#042959', //azul geral
+                        'primary-medium': '#16498C',
+                        'accent-yellow': '#F2E205',
+                        'accent-gold': '#FFD500', //amarelo geral
+                        'accent-orange': '#F29F05'
+                    },
+
+                    borderColor: {
+                        'primary-blue': '#042959',
+                        'primary-medium': '#16498C',
+                        'accent-yellow': '#F2E205',
+                        'accent-gold': '#FFD500',
+                        'accent-orange': '#F29F05'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .montserrat {
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+            font-style: normal;
+        }
+
+        .oswald {
+            font-family: "Oswald", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 200, 300, 400, 500, 600, 700;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body class="montserrat">
+    <header class='bg-primary-blue text-white text-base lg:text-lg'>
+        <div class="flex justify-between items-center px-4 py-3">
+            <!-- Logo -->
+            <a class="flex items-center space-x-2" href="">
+                <img class="w-24" src="img/logo-rr-large.png" alt="logotipo Ricardo Rodas">
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#about-section" class="hover:text-accent-yellow transition-colors">Sobre</a>
+                <a href="#values-section" class="hover:text-accent-yellow transition-colors">Princípios</a>
+                <a href="#evidence-section" class="hover:text-accent-yellow transition-colors">Depoimentos</a>
+                <a href="#contact-section" class="hover:text-accent-yellow transition-colors">Contato</a>
+                <a href="https://wa.me/5584994910399" target="_blank"
+                    class="flex gap-x-1 bg-accent-yellow items-center justify-center text-primary-blue px-4 py-2 rounded font-bold hover:bg-accent-gold transition-colors">Agendar<img
+                        src="icons/schedule-icon.svg" alt="icone de agenda"></a>
+            </nav>
+
+            <!-- Botão Menu Mobile -->
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-primary-medium transition-colors">
+                <img src="icons/menu-1-svgrepo-com-large.svg" alt="menu da versão mobile" class="w-9 h-9 filter">
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <nav id="mobileMenu"
+            class="hidden md:hidden bg-primary-medium transform -translate-y-full opacity-0 transition-all duration-300 ease-in-out">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#about-section"
+                    class="block py-3 px-2 text-lg hover:text-accent-yellow hover:bg-primary-blue hover:pl-4 transition-all duration-300 border-b border-primary-blue rounded-md">Sobre</a>
+                <a href="#values-section"
+                    class="block py-3 px-2 text-lg hover:text-accent-yellow hover:bg-primary-blue hover:pl-4 transition-all duration-300 border-b border-primary-blue rounded-md">Princípios</a>
+                <a href="#evidence-section"
+                    class="block py-3 px-2 text-lg hover:text-accent-yellow hover:bg-primary-blue hover:pl-4 transition-all duration-300 border-b border-primary-blue rounded-md">Depoimentos</a>
+                <a href="#contact-section"
+                    class="block py-3 px-2 text-lg hover:text-accent-yellow hover:bg-primary-blue hover:pl-4 transition-all duration-300 border-b border-primary-blue rounded-md">Contato</a>
+                <a href=""
+                    class="block bg-accent-yellow text-primary-blue px-4 py-3 rounded font-semibold text-center mt-4 hover:bg-accent-gold hover:scale-105 hover:shadow-lg transition-all duration-300 transform">Agendar
+                    Consultoria</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <!-- hero section -->
+        <section id="hero-section"
+            class="flex flex-col items-center justify-center text-white bg-[url(img/Frame-20.png)] bg-cover bg-center h-screen w-full">
+            <div class="text-center px-8 py-4 max-w-4xl mx-auto lg:max-w-7xl">
+                <span class="text-lg md:text-xl lg:text-2xl font-light uppercase">Família e Tradição</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold uppercase">Ricardo Rodas</h1>
+            </div>
+        </section>
+
+
+        <!-- sobre section -->
+        <section id="about-section" class="relative px-6 py-8 lg:py-16 lg:h-[650px] bg-accent-gold w-full">
+            <div class="flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-8 max-w-4xl lg:max-w-6xl mx-auto">
+                <div class="lg:w-1/2">
+                    <h2
+                        class="text-center lg:text-left uppercase font-regular text-[44px] lg:text-6xl xl:text-6xl opacity-0 translate-y-5 transition-all duration-1000 delay-625 ease-out animated-fade-up ">
+                        uma família<br class="hidden lg:block"> de <span class="font-bold">tradição</span></h2>
+                </div>
+                <div class="lg:w-1/2">
+                    <p
+                        class="font-medium text-base lg:text-lg xl:text-xl leading-relaxed opacity-0 translate-y-5 transition-all duration-1000 delay-800 ease-out animated-fade-up">
+                        Desde 1995, a Ricardo Rodas atua com <span class="underline">excelência</span> no mercado
+                        automotivo. Sediada em Natal (RN), nossa
+                        empresa é reconhecida pelo <span class="underline">compromisso</span> com a <span
+                            class="underline">
+                            qualidade, segurança,
+                            pontualidade
+                        </span> e pela busca
+                        contínua da <span class="underline">satisfação</span> dos clientes.<br><br>
+                        Contamos com uma equipe técnica qualificada e em constante <span
+                            class="underline">aperfeiçoamento</span>, preparada para atender
+                        com <span class="underline">precisão e responsabilidade</span> às mais diversas
+                        demandas.<br><br>
+                        Oferecemos serviços especializados de conserto, pintura e solda em peças de alumínio, além da
+                        comercialização de pneus e rodas, novas e usadas. Venha nos visitar e comprove o <span
+                            class="underline">padrão profissional</span>
+                        que aplicamos em cada produto e serviço.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Elemento da roda posicionado no canto inferior direito -->
+            <div class="absolute bottom-0 right-0 w-48 h-48 md:w-48 md:h-48 lg:w-96 lg:h-96 overflow-hidden">
+                <img src="img/400px-elastica-roda-de-liga-preta-um-deslumbrante-acessorio-automotivo 2.png"
+                    alt="imagem de uma roda 3-D"
+                    class="absolute -bottom-1/2 -right-1/2 w-full h-full object-cover transform rotate-90">
+            </div>
+
+            <!-- <div class="absolute -bottom-18 left-1/4 transform translate-x-1/2">
+                <img src="img/mecanico2-3D-reverse-375px.png" alt="mechanic 3D image"
+                    class="h-64 md:h-80 lg:h-96 object-contain">
+            </div> -->
+        </section>
+
+
+        <!--qualidade section-->
+        <section id="values-section"
+            class="flex flex-col items-center justify-center text-white bg-[url(img/mecanico-de-automoveis-trocando-as-rodas-carro-1500.png)] bg-cover bg-bottom-right h-screen lg:h-[800px] w-full">
+            <!-- bg-bottom-left bg-cover bg-center h-screen max-w-sm mx-auto -->
+            <div class="text-center px-8 py-4 max-w-4xl mx-auto">
+                <h2 class="text-5xl lg:text-6xl xl:text-7xl font-bold uppercase">qualidade</h2>
+            </div>
+        </section>
+
+
+        <!-- experiência section -->
+        <section id="experience-section" class="flex flex-col lg:flex-row lg:h-[800px] w-full">
+            <!-- Lado esquerdo: Conteúdo amarelo -->
+            <div class="lg:w-1/2  px-6 py-8 lg:px-4 lg:py-1 bg-accent-gold lg:flex lg:items-center ">
+                <div
+                    class="flex flex-col items-center lg:items-start gap-7 max-w-4xl mx-auto lg:mx-0 lg:ml-auto lg:mr-16 lg:px-2 lg:py1">
+                    <h2
+                        class="oswald uppercase text-5xl lg:text-7xl font-regular text-center lg:text-left opacity-0 translate-y-5 transition-all duration-1000 delay-625 ease-out animated-fade-up">
+                        experiência</h2>
+                    <p
+                        class="text-lg lg:text-2xl font-regular text-center lg:text-left opacity-0 translate-y-5 transition-all duration-1000 delay-800 ease-out animated-fade-up">
+                        Desde 1995 atuando no mercado, acumulamos know-how técnico e
+                        prática comprovada em serviços de rodas e pneus. Nossa trajetória garante soluções rápidas e
+                        precisas — do diagnóstico à execução — para manter seu veículo seguro e com desempenho ideal.
+                    </p>
+                    <div
+                        class="flex items-center justify-between border-solid border-2 border-primary-blue rounded-[10px]  px-4 py-2 gap-[10px] transition-all duration-300 hover:bg-primary-blue hover:text-white cursor-pointer group opacity-0 translate-y-5 transition-all duration-300 delay-150 ease-out animated-fade-up">
+                        <a class="text-xl inline-block rounded font-bold">Mais detalhes</a>
+                        <div class="relative w-5 h-5">
+                            <img src="icons/plus-large-svgrepo-com.svg" alt="icone de mais"
+                                class="w-5 h-5 absolute transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="icons/plus-large-svgrepo-com-yellow.svg" alt="icone de mais"
+                                class="w-5 h-5 absolute transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lado direito: Imagem -->
+            <div
+                class="lg:w-1/2 h-[406px] lg:h-full bg-[url(img/carro-em-garagem-de-reparacao.jpg)] bg-cover bg-center">
+            </div>
+        </section>
+
+
+        <!-- excelência section -->
+        <section id="excellence-section" class="flex flex-col-reverse lg:flex-row lg:h-[800px] w-full">
+            <!-- Lado esquerdo: Imagem -->
+            <div
+                class="lg:w-1/2 h-[406px] lg:h-full bg-[url(img/mecanico-trocando-pneus-em-um-servico-de-automoveis-1500.jpg)] bg-cover bg-top">
+            </div>
+            <!-- Lado direito: Conteúdo amarelo -->
+            <div class="lg:w-1/2 px-6 py-8 bg-accent-gold lg:flex lg:items-center">
+                <div
+                    class="flex flex-col items-center lg:items-start gap-7 max-w-4xl mx-auto lg:mx-0 lg:ml-auto lg:mr-16">
+                    <h2
+                        class="oswald uppercase text-5xl lg:text-7xl font-regular text-center lg:text-left opacity-0 translate-y-5 transition-all duration-1000 delay-625 ease-out animated-fade-up">
+                        excelência</h2>
+                    <p
+                        class="text-lg lg:text-2xl font-regular text-center lg:text-left opacity-0 translate-y-5 transition-all duration-1000 delay-800 ease-out animated-fade-up">
+                        Equipe técnica qualificada, procedimentos padronizados e compromisso com prazos e organização.
+                        Atendemos com responsabilidade e cortesia, oferecendo um serviço técnico à altura das
+                        expectativas
+                        mais exigentes.
+                    </p>
+                    <div
+                        class="flex items-center justify-between border-2 border-primary-blue rounded-[10px] border-solid px-4 py-2 gap-[10px] transition-all duration-300 hover:bg-primary-blue hover:text-white cursor-pointer group opacity-0 translate-y-5 transition-all duration-300 delay-150 ease-out animated-fade-up">
+                        <a class="text-xl inline-block rounded font-bold">Mais detalhes</a>
+                        <div class="relative w-5 h-5">
+                            <img src="icons/plus-large-svgrepo-com.svg" alt="icone de mais"
+                                class="w-5 h-5 absolute transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="icons/plus-large-svgrepo-com-yellow.svg" alt="icone de mais"
+                                class="w-5 h-5 absolute transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- entrega section -->
+        <section id="surrender-section" class="flex flex-col lg:flex-row lg:h-[800px] w-full">
+            <!-- Lado esquerdo: Conteúdo amarelo -->
+            <div class="lg:w-1/2 px-6 py-8 bg-accent-gold lg:flex lg:items-center">
+                <div
+                    class="flex flex-col items-center lg:items-start gap-7 max-w-4xl mx-auto lg:mx-0 lg:ml-auto lg:mr-16">
+                    <h2
+                        class="oswald uppercase text-5xl lg:text-7xl font-regular text-center lg:text-left opacity-0 translate-y-5 transition-all duration-1000 delay-625 ease-out animated-fade-up">
+                        entrega</h2>
+                    <p
+                        class="text-lg lg:text-2xl font-regular text-center lg:text-left opacity-0 translate-y-5 transition-all duration-1000 delay-800 ease-out animated-fade-up">
+                        Trabalhamos com transparência, controle de qualidade rigoroso e garantia nos serviços prestados.
+                        Clientes escolhem a Ricardo Rodas pela segurança de receber atendimento honesto, peças e reparos
+                        que
+                        realmente duram.
+                    </p>
+                    <div
+                        class="flex items-center justify-between border-2 border-primary-blue rounded-[10px] border-solid px-4 py-2 gap-[10px] transition-all duration-300 hover:bg-primary-blue hover:text-white cursor-pointer group opacity-0 translate-y-5 transition-all duration-300 delay-150 ease-out animated-fade-up">
+                        <a class="text-xl inline-block rounded font-bold">Mais detalhes</a>
+                        <div class="relative w-5 h-5">
+                            <img src="icons/plus-large-svgrepo-com.svg" alt="icone de mais"
+                                class="w-5 h-5 absolute transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="icons/plus-large-svgrepo-com-yellow.svg" alt="icone de mais"
+                                class="w-5 h-5 absolute transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lado direito: Imagem -->
+            <div
+                class="lg:w-1/2 h-[406px] lg:h-full bg-[url(img/almofadas-vermelhas-pedal-no-volante-de-um-carro.jpg)] bg-cover bg-center">
+            </div>
+        </section>
+
+
+        <!-- antesxdepois section -->
+        <section id="evidence-section" class="px-6 py-8 bg-accent-gold w-full lg:h-[600px]">
+
+            <!-- espaco dos cards -->
+            <div class="flex flex-col gap-3.5 max-w-6xl mx-auto">
+                <!-- espaço do titulo e subtitulo acima do carrossel-->
+                <div class="flex flex-col items-center gap-0 p-4">
+                    <h2 class="font-bold text-3xl lg:text-6xl">Antes x Depois</h2>
+                    <span class="text-xs font-medium text-center lg:text-base">Veja a transformação que fazemos e o
+                        comentário dos nossos
+                        clientes</span>
+                </div>
+
+                <!-- MOBILE: Carrossel (até 375px) -->
+                <div class="block sm:hidden">
+                    <div class="carousel-container overflow-hidden rounded-lg">
+                        <div id="carouselTrack"
+                            class="carousel-track flex transition-transform duration-300 ease-in-out">
+                            <div
+                                class="carousel-slide flex-shrink-0 w-full flex flex-col items-center justify-center gap-4 bg-white p-4 rounded-lg shadow-lg">
+                                <div class="flex gap-2.5 flex-1">
+                                    <div class="px-2">
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="font-bold text-sm">Antes</h3>
+                                            <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda antes"
+                                                class="rounded">
+                                        </div>
+                                    </div>
+                                    <div class="px-2">
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="font-bold text-sm">Depois</h3>
+                                            <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda depois"
+                                                class="rounded">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-start gap-2.5 flex-1">
+                                    <div class="w-full px-2">
+                                        <div class="flex flex-col gap-2">
+                                            <img src="icons/5-stars-icon.svg" alt="icone de 5 estrelas" class="w-20">
+                                            <span class="text-xs leading-relaxed">"Incrível! Minha roda estava
+                                                completamente riscada
+                                                e
+                                                agora parece nova.
+                                                Serviço impecável e preço justo."</span>
+                                            <h4 class="text-xs font-bold">- Carlos Silva (Honda Civic 2020)</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- card 2 do carrosel -->
+                            <div
+                                class="carousel-slide flex-shrink-0 w-full flex flex-col items-center justify-center gap-4 bg-white p-4 rounded-lg shadow-lg">
+                                <div class="flex gap-2.5 flex-1">
+                                    <div class="px-2">
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="font-bold text-sm">Antes</h3>
+                                            <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda antes"
+                                                class="rounded">
+                                        </div>
+                                    </div>
+                                    <div class="px-2">
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="font-bold text-sm">Depois</h3>
+                                            <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda depois"
+                                                class="rounded">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-start gap-2.5 flex-1">
+                                    <div class="w-full px-2">
+                                        <div class="flex flex-col gap-2">
+                                            <img src="icons/5-stars-icon.svg" alt="icone de 5 estrelas" class="w-20">
+                                            <span class="text-xs leading-relaxed">"Incrível! Minha roda estava
+                                                completamente riscada
+                                                e
+                                                agora parece nova.
+                                                Serviço impecável e preço justo."</span>
+                                            <h4 class="text-xs font-bold">- Carlos Silva (Honda Civic 2020)</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- card 3 do carrosel -->
+                            <div
+                                class="carousel-slide flex-shrink-0 w-full flex flex-col items-center justify-center gap-4 bg-white p-4 rounded-lg shadow-lg">
+                                <div class="flex gap-2.5 flex-1">
+                                    <div class="px-2">
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="font-bold text-sm">Antes</h3>
+                                            <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda antes"
+                                                class="rounded">
+                                        </div>
+                                    </div>
+                                    <div class="px-2">
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="font-bold text-sm">Depois</h3>
+                                            <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda depois"
+                                                class="rounded">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-start gap-2.5 flex-1">
+                                    <div class="w-full px-2">
+                                        <div class="flex flex-col gap-2">
+                                            <img src="icons/5-stars-icon.svg" alt="icone de 5 estrelas" class="w-20">
+                                            <span class="text-xs leading-relaxed">"Incrível! Minha roda estava
+                                                completamente riscada
+                                                e
+                                                agora parece nova.
+                                                Serviço impecável e preço justo."</span>
+                                            <h4 class="text-xs font-bold">- Carlos Silva (Honda Civic 2020)</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- botoes do carrossel mobile -->
+                    <div class="flex gap-7 items-center justify-center mt-4">
+                        <button id="prevBtn" class="carousel-btn">
+                            <img src="icons/left-button-carrossel.png" alt="botão de voltar" class="w-8 h-8">
+                        </button>
+                        <button id="nextBtn" class="carousel-btn">
+                            <img src="icons/right-button-carrossel.png" alt="botão de próximo" class="w-8 h-8">
+                        </button>
+                    </div>
+
+                    <!-- indicadores -->
+                    <div class="flex gap-2 justify-center mt-3">
+                        <div class="carousel-dot w-2 h-2 rounded-full bg-primary-blue transition-all duration-300">
+                        </div>
+                        <div class="carousel-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300"></div>
+                        <div class="carousel-dot w-2 h-2 rounded-full bg-gray-400 transition-all duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- TABLET: Layout Flex Vertical (640px-767px) -->
+                <div class="hidden sm:flex md:hidden flex-col gap-4">
+                    <!-- card 1 tablet -->
+                    <div class="flex flex-col items-center justify-center gap-4 bg-white p-4 rounded-lg shadow-lg">
+                        <div class="flex gap-2.5 flex-1">
+                            <div class="px-2">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-bold text-sm">Antes</h3>
+                                    <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda antes do serviço" class="rounded">
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-bold text-sm">Depois</h3>
+                                    <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda depois do serviço" class="rounded">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start gap-2.5 flex-1">
+                            <div class="w-full px-2">
+                                <div class="flex flex-col gap-2">
+                                    <img src="icons/5-stars-icon.svg" alt="icone de 5 estrelas" class="w-20">
+                                    <span class="text-xs leading-relaxed">"Incrível! Minha roda estava completamente
+                                        riscada e agora parece nova. Serviço impecável e preço justo."</span>
+                                    <h4 class="text-xs font-bold">- Carlos Silva (Honda Civic 2020)</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 2 tablet -->
+                    <div class="flex flex-col items-center justify-center gap-4 bg-white p-4 rounded-lg shadow-lg">
+                        <div class="flex gap-2.5 flex-1">
+                            <div class="px-2">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-bold text-sm">Antes</h3>
+                                    <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda antes do serviço" class="rounded">
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-bold text-sm">Depois</h3>
+                                    <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda depois do serviço" class="rounded">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start gap-2.5 flex-1">
+                            <div class="w-full px-2">
+                                <div class="flex flex-col gap-2">
+                                    <img src="icons/5-stars-icon.svg" alt="icone de 5 estrelas" class="w-20">
+                                    <span class="text-xs leading-relaxed">"Serviço excelente! Recuperaram minha roda que
+                                        parecia impossível de consertar."</span>
+                                    <h4 class="text-xs font-bold">- Maria Santos (Toyota Corolla 2019)</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 3 tablet -->
+                    <div class="flex flex-col items-center justify-center gap-4 bg-white p-4 rounded-lg shadow-lg">
+                        <div class="flex gap-2.5 flex-1">
+                            <div class="px-2">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-bold text-sm">Antes</h3>
+                                    <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda antes do serviço" class="rounded">
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-bold text-sm">Depois</h3>
+                                    <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda depois do serviço" class="rounded">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start gap-2.5 flex-1">
+                            <div class="w-full px-2">
+                                <div class="flex flex-col gap-2">
+                                    <img src="icons/5-stars-icon.svg" alt="icone de 5 estrelas" class="w-20">
+                                    <span class="text-xs leading-relaxed">"Profissionais competentes e preço justo.
+                                        Recomendo!"</span>
+                                    <h4 class="text-xs font-bold">- João Oliveira (Volkswagen Golf 2021)</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DESKTOP: Layout Flex Horizontal (768px+) - 3 cards lado a lado -->
+                <div class="hidden md:flex flex-row gap-5">
+                    <!-- card 1 desktop horizontal -->
+                    <div
+                        class="flex flex-col items-center justify-center gap-4 bg-white p-4 lg:p-8 rounded-lg shadow-lg flex-1">
+                        <div class="flex gap-2.5 flex-1">
+                            <div class="px-2">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-bold text-sm">Antes</h3>
+                                    <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda antes do serviço" class="rounded">
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-bold text-sm">Depois</h3>
+                                    <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda depois do serviço" class="rounded">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start gap-2.5 flex-1">
+                            <div class="w-full px-2">
+                                <div class="flex flex-col gap-2">
+                                    <img src="icons/5-stars-icon.svg" alt="icone de 5 estrelas" class="w-20">
+                                    <span class="text-xs leading-relaxed">"Incrível! Minha roda estava completamente
+                                        riscada e
+                                        agora parece nova. Serviço impecável e preço justo."</span>
+                                    <h4 class="text-xs font-bold">- Carlos Silva (Honda Civic 2020)</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 2 desktop horizontal -->
+                    <div
+                        class="flex flex-col items-center justify-center gap-4 bg-white p-4 lg:p-8 rounded-lg shadow-lg flex-1">
+                        <div class="flex gap-2.5 flex-1">
+                            <div class="px-2">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-bold text-sm">Antes</h3>
+                                    <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda antes do serviço" class="rounded">
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-bold text-sm">Depois</h3>
+                                    <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda depois do serviço" class="rounded">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start gap-2.5 flex-1">
+                            <div class="w-full px-2">
+                                <div class="flex flex-col gap-2">
+                                    <img src="icons/5-stars-icon.svg" alt="icone de 5 estrelas" class="w-20">
+                                    <span class="text-xs leading-relaxed">"Serviço excelente! Recuperaram minha roda que
+                                        parecia
+                                        impossível de consertar."</span>
+                                    <h4 class="text-xs font-bold">- Maria Santos (Toyota Corolla 2019)</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 3 desktop horizontal -->
+                    <div
+                        class="flex flex-col items-center justify-center gap-4 bg-white p-4 lg:p-8 rounded-lg shadow-lg flex-1">
+                        <div class="flex gap-2.5 flex-1">
+                            <div class="px-2">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-bold text-sm">Antes</h3>
+                                    <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda antes do serviço" class="rounded">
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-bold text-sm">Depois</h3>
+                                    <img src="img/Rectangle-10-mob.png" alt="imagem de uma roda depois do serviço" class="rounded">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start gap-2.5 flex-1">
+                            <div class="w-full px-2">
+                                <div class="flex flex-col gap-2">
+                                    <img src="icons/5-stars-icon.svg" alt="icone de 5 estrelas" class="w-20">
+                                    <span class="text-xs leading-relaxed">"Profissionais competentes e preço justo.
+                                        Recomendo!"</span>
+                                    <h4 class="text-xs font-bold">- João Oliveira (Volkswagen Golf 2021)</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Call to action section -->
+        <section id="contact-section"
+            class="relative flex flex-col items-center justify-between text-white bg-[url(img/Frame-49-2.png)] bg-cover bg-center h-screen w-full overflow-hidden lg:h-[600px]">
+
+            <!-- Conteúdo principal centralizado -->
+            <div class="flex flex-col items-center justify-start flex-1 px-6 py-8 z-10 max-w-4xl mx-auto w-full">
+                <!-- Título e subtítulo -->
+                <div class="flex flex-col items-center gap-1 text-center mb-8">
+                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold">Transforme suas Rodas Hoje!</h3>
+                    <span class="text-base text-center lg:text-xl">Entre em contato conosco e solicite um orçamento
+                        gratuito.</span>
+                </div>
+
+                <!-- Botões de ação -->
+                <div class="flex flex-col sm:flex-row gap-4 lg:gap-10 mb-8">
+                    <!-- Botão Ligar -->
+                    <a href="tel:+5584994910399"
+                        class="flex items-center justify-center gap-3 bg-accent-gold text-primary-blue px-6 py-3 rounded-lg font-bold text-lg hover:bg-accent-yellow transition-all duration-300 shadow-lg transform hover:scale-105">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                        </svg>
+                        Ligar agora!
+                    </a>
+
+                    <!-- Botão WhatsApp -->
+                    <a href="https://wa.me/5584994910399" target="_blank"
+                        class="flex items-center justify-center gap-3 bg-green-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-green-600 transition-all duration-300 shadow-lg transform hover:scale-105">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.548" />
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mecânico 3D posicionado na parte inferior -->
+            <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-0 ">
+                <img src="img/Mecânico-3D-reverse-375px.png" alt="image 3D de mecânico"
+                    class="h-64 md:h-80 lg:h-96 object-contain lg:hidden">
+                <img src="img/Mecânico-3D-reverse-1920px.png" alt="image 3D de mecânico"
+                    class="h-64 hidden md:h-80 lg:h-96 object-contain lg:block">
+            </div>
+        </section>
+
+
+        <section class="relative pt-7 bg-accent-gold w-full lg:h-[600px] overflow-hidden lg:py-16">
+
+            <div class="text-center mb-6 max-w-4xl mx-auto lg:mb-12">
+                <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-blue mb-2">Entre em contato!</h3>
+                <span class="font-medium text-primary-blue">Visite nossa loja ou entre em contato conosco para solicitar
+                    um orçamento gratuito</span>
+            </div>
+
+            <div class="pb-4 relative max-w-7xl mx-auto">
+
+                <div
+                    class="flex flex-col  items-center md:pb-8 md:pr-8 md:pl-8 md:items-start lg:items-start lg:flex-row lg:justify-center lg:gap-10 xl:gap-16 lg:mr-80">
+
+                    <!-- Container dos telefones - lado a lado no tablet (md) -->
+                    <div class="md:flex lg:flex md:flex-row lg:flex-row md:gap-16 lg:gap-8 md:justify-center lg:justify-center md:items-start lg:items-start">
+                        <div class="flex flex-col lg:gap-2 space-y-3 items-start">
+
+                            <div class="flex items-center gap-3">
+                                <div><img src="icons/phone-icon-375.svg" alt="icone de telefone"></div>
+                                <a href="tel:+5584994910399" class="text-primary-blue font-bold hover:underline">
+                                    Fortaleza/CE: (85) 3292-1606
+                                </a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div><img src="icons/phone-icon-375.svg" alt="icone de telefone"></div>
+                                <a href="tel:+5584994910399" class="text-primary-blue font-bold hover:underline">
+                                    Natal/RN: (85) 3292-1606
+                                </a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div><img src="icons/phone-icon-375.svg" alt="icone de telefone"></div>
+                                <a href="tel:+5584994910399" class="text-primary-blue font-bold hover:underline">
+                                    Maceió/AL: (85) 3292-1606
+                                </a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div><img src="icons/phone-icon-375.svg" alt="icone de telefone"></div>
+                                <a href="tel:+5584994910399" class="text-primary-blue font-bold hover:underline">
+                                    Salvador/BA: (85) 3292-1606
+                                </a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div><img src="icons/phone-icon-375.svg" alt="icone de telefone"></div>
+                                <a href="tel:+5584994910399" class="text-primary-blue font-bold hover:underline">
+                                    J. Pessoa/PB: (85) 3292-1606
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col lg:gap-2 space-y-3 items-start mt-3 md:mt-0 lg:mt-0">
+                            <div class="flex items-center gap-3">
+                                <div><img src="icons/phone-icon-375.svg" alt="icone de telefone"></div>
+                                <a href="tel:+5584994910399" class="text-primary-blue font-bold hover:underline">
+                                    Recife/PE: (85) 3292-1606
+                                </a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div><img src="icons/phone-icon-375.svg" alt="icone de telefone"></div>
+                                <a href="tel:+5584994910399" class="text-primary-blue font-bold hover:underline">
+                                    São Luiz/MA: (85) 3292-1606
+                                </a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div><img src="icons/phone-icon-375.svg" alt="icone de telefone"></div>
+                                <a href="tel:+5584994910399" class="text-primary-blue font-bold hover:underline">
+                                    Vitória/ES: (85) 3292-1606
+                                </a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div><img src="icons/phone-icon-375.svg" alt="icone de telefone"></div>
+                                <a href="tel:+5584994910399" class="text-primary-blue font-bold hover:underline">
+                                    Petrolina/PE: (85) 3292-1606
+                                </a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div><img src="icons/phone-icon-375.svg" alt="icone de telefone"></div>
+                                <a href="tel:+5584994910399" class="text-primary-blue font-bold hover:underline">
+                                    Belém/PA: (85) 3292-1606
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Container do horário e endereço - embaixo no tablet (md) -->
+                    <div class="flex flex-col space-y-4 mt-8 md:mt-8 lg:mt-0 items-start">
+
+                        <div class="flex items-start gap-3">
+                            <div>
+                                <img src="icons/clock-icon-375.svg" alt="clock icon">
+                            </div>
+                            <div>
+                                <span class="text-primary-blue font-bold text-lg">Horário de funcionamento:</span>
+                                <p class="text-primary-blue text-sm mt-1 leading-relaxed">
+                                    Segunda a Sexta: 8h às 18h<br>
+                                    Sábado: 8h às 14h<br>
+                                    Domingo: Fechado
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 pt-2">
+                            <div>
+                                <img src="icons/location-icon-375.svg" alt="icone de localização">
+                            </div>
+                            <div>
+                                <span class="text-primary-blue font-bold text-lg">Endereço:</span>
+                                <p class="text-primary-blue text-sm mt-1 leading-relaxed">
+                                    Rua das Oficinas, 123<br>
+                                    Vila Automotiva, São Paulo - SP<br>
+                                    CEP: 01234-567
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="absolute bottom-0 right-0 h-64 md:bottom-0 md:right-0 md:h-[350px] lg:top-0 
+                        lg:h-[480px] lg:-bottom-16 lg:-right-4 
+                        xl:right-0">
+                    <img src="img/mecanico2-3D-reverse-375px.png" alt="imagem de mecânico 3D"
+                        class="h-full w-auto object-contain md:hidden lg:hidden">
+                    <img src="img/mecanico2-3D-reverse-1920px.png" alt="imagem de mecânico 3D"
+                        class="h-full w-auto object-contain hidden md:block lg:block">
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-primary-blue text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer Content Grid -->
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+
+                <!-- Coluna 1: Logo e Descrição -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <h3 class="font-arialrounded text-accent-yellow text-2xl font-bold">Ricardo Rodas</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Especialistas em recuperação de rodas automotivas há mais de 30 anos.
+                        Qualidade, confiança e excelência em cada serviço.
+                    </p>
+                    <!-- Redes Sociais -->
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-primary-medium hover:bg-accent-orange rounded-full flex items-center justify-center transition-colors group">
+                            <!-- Facebook Icon -->
+                            <svg class="w-5 h-5 text-white group-hover:text-primary-dark" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-primary-medium hover:bg-accent-orange rounded-full flex items-center justify-center transition-colors group">
+                            <!-- Instagram Icon -->
+                            <svg class="w-5 h-5 text-white group-hover:text-primary-dark" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.621 5.367 11.988 11.988 11.988s11.987-5.367 11.987-11.988C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-2.458 0-4.467-2.009-4.467-4.467s2.009-4.467 4.467-4.467 4.467 2.009 4.467 4.467-2.009 4.467-4.467 4.467zm7.05 0c-2.458 0-4.467-2.009-4.467-4.467s2.009-4.467 4.467-4.467 4.467 2.009 4.467 4.467-2.009 4.467-4.467 4.467z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-primary-medium hover:bg-accent-orange rounded-full flex items-center justify-center transition-colors group">
+                            <!-- WhatsApp Icon -->
+                            <svg class="w-5 h-5 text-white group-hover:text-primary-dark" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.864 3.488" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <!-- Coluna 3: Contato -->
+                <div>
+                    <h4 class="text-accent-yellow font-semibold text-lg mb-4">Contato</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-accent-orange" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                            <span>(84) 99999-9999</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-accent-orange" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <span>contato@ricardorodas.com</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-4 h-4 text-accent-orange mt-1" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Rua das Rodas, 123<br>Centro - Natal, RN</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Linha Divisória -->
+            <div class="border-t border-gray-600 pt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <!-- Copyright -->
+                    <p class="text-gray-300 text-sm mb-4 md:mb-0">
+                        © 2024 Ricardo Rodas. Todos os direitos reservados.
+                    </p>
+
+                    <!-- Links Legais -->
+                    <div class="flex space-x-6 text-sm">
+                        <a href="#" class="text-gray-300 hover:text-accent-yellow transition-colors">Política de
+                            Privacidade</a>
+                        <a href="#" class="text-gray-300 hover:text-accent-yellow transition-colors">Termos de
+                            Uso</a>
+                        <a href="#" class="text-gray-300 hover:text-accent-yellow transition-colors">LGPD</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Menu Mobile Toggle -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let isMenuOpen = false;
+
+        mobileMenuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+
+            if (isMenuOpen) {
+                // Abrir menu
+                mobileMenu.classList.remove('-translate-y-full', 'opacity-0', 'hidden');
+                mobileMenu.classList.add('translate-y-0', 'opacity-100');
+            } else {
+                // Fechar menu
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'hidden');
+            }
+        });
+
+        // Fechar menu ao clicar em um link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'hidden');
+            });
+        });
+
+        // Fechar menu ao redimensionar para desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768 && isMenuOpen) {
+                isMenuOpen = false;
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'hidden');
+            }
+        });
+    </script>
+
+    <!-- efeito de surgimento do titulo e texto  -->
+    <script>
+        // Observar a section, animar o parágrafo
+        const sections = document.querySelectorAll('section[id]');
+        // vai animar todos os elementos em uma section que tenham a class animated-fade-up
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const fadeElements = entry.target.querySelectorAll('.animated-fade-up') //Pega h2 E p
+                    //querySelector pega o elemento único, querySelectorAll pega todos os elementos com essa classe
+                    fadeElements.forEach(element => {
+                        element.classList.remove('opacity-0', 'translate-y-5');
+                        element.classList.add('opacity-100', 'translate-y-0');
+                    });
+
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Para cada section, criar um observer
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+    <!-- Carrossel Script -->
+    <script>
+        const carouselTrack = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        let currentSlide = 0;
+        const totalSlides = 3;
+
+        function updateCarousel() {
+            // Move o track
+            const translateX = -currentSlide * 100;
+            carouselTrack.style.transform = `translateX(${translateX}%)`;
+
+            // Atualiza os dots
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.remove('bg-gray-400');
+                    dot.classList.add('bg-primary-blue');
+                } else {
+                    dot.classList.remove('bg-primary-blue');
+                    dot.classList.add('bg-gray-400');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Dots click
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateCarousel();
+            });
+        });
+
+        // Touch/Swipe functionality
+        let startX = 0;
+        let currentX = 0;
+        let isDragging = false;
+
+        carouselTrack.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        });
+
+        carouselTrack.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            currentX = e.touches[0].clientX;
+        });
+
+        carouselTrack.addEventListener('touchend', () => {
+            if (!isDragging) return;
+
+            const diffX = startX - currentX;
+            const threshold = 50;
+
+            if (Math.abs(diffX) > threshold) {
+                if (diffX > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+
+            isDragging = false;
+        });
+
+        // Auto-play (opcional - pode remover se não quiser)
+        let autoPlayInterval;
+
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 5000); // 5 segundos
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        // Iniciar auto-play apenas no mobile pequeno (até 375px)
+        function initCarousel() {
+            if (window.innerWidth < 640) { // sm breakpoint do Tailwind
+                startAutoPlay();
+
+                // Pausar auto-play quando usuario interage
+                [nextBtn, prevBtn, ...dots].forEach(element => {
+                    element.addEventListener('click', () => {
+                        stopAutoPlay();
+                        setTimeout(startAutoPlay, 3000); // Reinicia após 3s
+                    });
+                });
+            } else {
+                stopAutoPlay();
+            }
+        }
+
+        // Inicializar
+        initCarousel();
+
+        // Reinicializar quando a tela muda de tamanho
+        window.addEventListener('resize', () => {
+            initCarousel();
+            // Reset do carrossel quando muda para desktop
+            if (window.innerWidth >= 640) {
+                currentSlide = 0;
+                updateCarousel();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
