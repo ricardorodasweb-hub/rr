@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth"lang="en">
+<html class="scroll-smooth"lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -47,6 +47,14 @@
             font-weight: 200, 300, 400, 500, 600, 700;
             font-style: normal;
         }
+        /* Carrossel: transição mais suave e otimizações de GPU */
+        .carousel-container { touch-action: pan-y; }
+        .carousel-track {
+            /* duração e easing mais suaves */
+            transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform;
+        }
+        .carousel-slide { backface-visibility: hidden; }
     </style>
 </head>
 
@@ -131,13 +139,13 @@
                         Oferecemos serviços especializados de conserto, pintura e solda em peças de alumínio, além da
                         comercialização de pneus e rodas, novas e usadas. Venha nos visitar e comprove o <span
                             class="underline">padrão profissional</span>
-                        que aplicamos em cada produto e serviço.
+                        que aplicamos<br class="md:hidden lg:hidden"> em cada produto e serviço.
                     </p>
                 </div>
             </div>
 
             <!-- Elemento da roda posicionado no canto inferior direito -->
-            <div class="absolute bottom-0 right-0 w-48 h-48 md:w-48 md:h-48 lg:w-96 lg:h-96 overflow-hidden">
+            <div class="absolute bottom-0 right-0 w-40 h-40 md:w-48 md:h-48 lg:w-96 lg:h-96 overflow-hidden">
                 <img src="img/400px-elastica-roda-de-liga-preta-um-deslumbrante-acessorio-automotivo 2.png"
                     alt="imagem de uma roda 3-D"
                     class="absolute -bottom-1/2 -right-1/2 w-full h-full object-cover transform rotate-90">
@@ -752,7 +760,7 @@
                     </div>
 
                 </div>
-                <div class="absolute bottom-0 right-0 h-64 md:bottom-0 md:right-0 md:h-[350px] lg:top-0 
+                <div class="absolute bottom-0 right-0 h-48 md:bottom-0 md:right-0 md:h-[350px] lg:top-0 
                         lg:h-[480px] lg:-bottom-16 lg:-right-4 
                         xl:right-0">
                     <img src="img/mecanico2-3D-reverse-375px.png" alt="imagem de mecânico 3D"
@@ -987,37 +995,67 @@
             });
         });
 
-        // Touch/Swipe functionality
+        // Touch/Swipe and mouse drag functionality (melhor experiência)
         let startX = 0;
         let currentX = 0;
         let isDragging = false;
+        let dragDelta = 0;
+        let trackWidth = 0;
 
-        carouselTrack.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
+        function onDragStart(clientX) {
+            startX = clientX;
+            currentX = clientX;
             isDragging = true;
-        });
+            dragDelta = 0;
+            trackWidth = carouselTrack.clientWidth || window.innerWidth;
+            // desativa transição para acompanhar o dedo
+            carouselTrack.style.transition = 'none';
+        }
 
-        carouselTrack.addEventListener('touchmove', (e) => {
+        function onDragMove(clientX) {
             if (!isDragging) return;
-            currentX = e.touches[0].clientX;
-        });
+            currentX = clientX;
+            dragDelta = currentX - startX;
+            const percent = (dragDelta / trackWidth) * 100;
+            const base = -currentSlide * 100;
+            carouselTrack.style.transform = `translateX(${base + percent}%)`;
+        }
 
-        carouselTrack.addEventListener('touchend', () => {
+        function onDragEnd() {
             if (!isDragging) return;
+            isDragging = false;
+            // restaura transição padrão (definida no CSS)
+            carouselTrack.style.transition = '';
 
-            const diffX = startX - currentX;
-            const threshold = 50;
+            const absDelta = Math.abs(dragDelta);
+            // threshold: 15% da largura ou 50px
+            const thresholdPx = Math.max(50, trackWidth * 0.15);
 
-            if (Math.abs(diffX) > threshold) {
-                if (diffX > 0) {
+            if (absDelta > thresholdPx) {
+                if (dragDelta < 0) {
                     nextSlide();
                 } else {
                     prevSlide();
                 }
+            } else {
+                // volta para a posição atual
+                updateCarousel();
             }
+            dragDelta = 0;
+        }
 
-            isDragging = false;
+        // Eventos touch
+        carouselTrack.addEventListener('touchstart', (e) => onDragStart(e.touches[0].clientX), {passive: true});
+        carouselTrack.addEventListener('touchmove', (e) => onDragMove(e.touches[0].clientX), {passive: true});
+        carouselTrack.addEventListener('touchend', onDragEnd);
+
+        // Eventos de mouse para desktop (melhora a experiência em trackpads/mouses)
+        carouselTrack.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+            onDragStart(e.clientX);
         });
+        window.addEventListener('mousemove', (e) => onDragMove(e.clientX));
+        window.addEventListener('mouseup', onDragEnd);
 
         // Auto-play (opcional - pode remover se não quiser)
         let autoPlayInterval;
