@@ -55,6 +55,17 @@
             will-change: transform;
         }
         .carousel-slide { backface-visibility: hidden; }
+    /* Garante que imagens não excedam a largura do container (seguro globalmente) */
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* Regras limitadas a telas pequenas para evitar impactar md/lg */
+    @media (max-width: 767px) {
+        /* Evita scroll horizontal indesejado em mobile */
+        html, body { overflow-x: hidden; }
+
+        /* Força o menu mobile a ocupar a largura correta quando mostrado */
+        #mobileMenu { left: 0; right: 0; width: 100%; box-sizing: border-box; }
+    }
     </style>
 </head>
 
